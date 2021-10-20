@@ -29,7 +29,7 @@ img {
 }
 
 #wrap {
-    background-image: url(../portfolio1/img_folder/img1.jpg);
+    background-image: url(../img_folder/img1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -246,7 +246,7 @@ footer {
 }
 
 .catch {
-  background-image: url(../portfolio1/img_folder/catch.png);
+  background-image: url(../img_folder/catch.png);
   background-repeat: no-repeat;
   background-position: center center;
 }
