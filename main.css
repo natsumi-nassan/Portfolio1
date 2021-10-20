@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    background-color: #6bb3ae;
+    color: white;
+    margin: auto;
+    padding: 10px 0 20px 20px;
+    text-align: left;
+    font-size: 30px;
+    font-family:  'M PLUS Rounded 1c', sans-serif;
+}
+
+.logo a {
+    text-decoration-line: none;
+    color: white;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+#wrap {
+    background-image: url(../portfolio1/img_folder/img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 1000px;
+    overflow: hidden;
+}
+
+/*
+#middle_img {
+    background: url(../img_folder/img2.jpeg);
+    background-size:cover;
+    height: 560px;
+    overflow: hidden;
+}
+*/
+#nav{
+  position: absolute;
+  top: 0;
+　/*ナビメニューを右に隠した状態になる*/
+  right: -40%;
+  width: 40%;
+  height: 100vh;
+  background: #ffffff;
+　/*０.7秒かけてナビメニューがスライドする*/
+  transition: .7s;
+  text-align: center;
+}
+
+#nav ul{
+  padding-top: 80px;
+}
+#nav ul li{
+  list-style-type: none;
+  font-size: 20px;
+}
+#nav a{
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  margin: 0 15px;
+  padding: 10px;
+  transition: .5s;
+}
+#nav li a:hover{
+  color: #ffffff;
+  background: #6bb3ae;
+  border-bottom: none;
+}
+.menu-btn {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    display: flex;
+    height: 50px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+.menu-btn span:before {
+    bottom: 8px;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+.menu-btn span:after {
+    top: 8px;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+    transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content {
+    height: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    right: -200px;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #6bb3ae;
+    width: 200px;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    right: 0;/*メニューを画面内へ*/
+}
+
+#body #animation {
+  font-family:  'M PLUS Rounded 1c', sans-serif;
+  color: white;
+  font-size: 50px;
+}
+
+ .fadeInDown {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:1s;
+ -ms-animation-duration:1s;
+ animation-duration:1s;
+ -webkit-animation-name: fadeInDown;
+ animation-name: fadeInDown;
+ visibility: visible !important;
+}
+@-webkit-keyframes fadeInDown {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fadeInDown {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
+
+.button {
+  background-color: white;
+  color: #6bb3ae;
+  font-size: 20px;
+  font-family:  'M PLUS Rounded 1c', sans-serif;
+  text-decoration: none;
+  padding: 5px 30px 3px 30px;
+  border: #6bb3ae 2px solid;
+  border-radius: 40px;
+  position: static;
+}
+
+.button:hover {
+  background-color: #6bb3ae;
+  color: white;
+  font-size: 20px;
+  font-family:  'M PLUS Rounded 1c', sans-serif;
+  padding: 5px 30px 3px 30px;
+  border-radius: 40px;
+}
+.inline-block{
+  display:inline-block;
+}
+
+#secondContents {
+  margin-top: 340px;
+}
+
+footer {
+  width: 100%;
+  height: 25px;
+  color: white;
+  text-align: center;
+  background-color: #707070;
+  font-family:  'M PLUS Rounded 1c', sans-serif;
+}
+
+#wrap {
+  background-color: beige;
+}
+
+.contents {
+  text-align: center;
+}
+
+.catch {
+  background-image: url(../portfolio1/img_folder/catch.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#top_img {
+    width: 500px;
+    height: 500px;
+}
